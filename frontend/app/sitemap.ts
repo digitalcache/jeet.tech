@@ -6,7 +6,7 @@ type Subdomain = {
 }
 
 export default async function sitemap () {
-  const baseUrl = 'web3it.ai';
+  const baseUrl = 'jeet.technology';
   const supabase = createClient();
   const { data: Subdomains } = await supabase
     .from('Subdomains')

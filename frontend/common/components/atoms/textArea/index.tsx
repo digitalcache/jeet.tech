@@ -4,7 +4,7 @@ import {
 import autosize from 'autosize';
 import { TextAreaProps } from "./types"
 
-const getErrorClasses = (error: boolean | undefined) => error ? 'ring-1 ring-red-300 pr-10' : '';
+const getErrorClasses = (error: boolean | undefined) => error ? 'ring-1 ring-red-400 pr-10' : '';
 
 export const TextArea = (props : TextAreaProps) => {
   const {
@@ -57,7 +57,7 @@ export const TextArea = (props : TextAreaProps) => {
         />
       </div>
       {error && (
-        <p className="mt-0.5 text-sm text-red-300" data-cy={`${name}-error`}>
+        <p className="mt-0.5 text-sm text-red-400" data-cy={`${name}-error`}>
           {errorMessage}
         </p>
       )}

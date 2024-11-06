@@ -39,7 +39,7 @@ export const ModalTrigger = ({
         }
         setIsModalOpen(true)
       }}
-      className="transition-all w-full mt-4 duration-150 disabled:bg-space-cadet/40 bg-space-cadet hover:bg-space-cadet/80 font-semibold"
+      className="transition-all w-full mt-4 duration-150 disabled:bg-gray-500 bg-gray-700 hover:bg-gray-600 font-semibold"
     >
       {children}
     </Button>
@@ -96,7 +96,7 @@ export const ModalBody = ({
           <motion.div
             ref={modalRef}
             className={cn(
-              "max-w-[calc(100%-40px)] md:max-w-[820px] bg-eerie-black border-neutral-800 rounded-2xl relative z-50 flex flex-col flex-1 overflow-hidden",
+              "max-w-[calc(100%-40px)] md:max-w-[820px] bg-gray-800 border-neutral-800 rounded-2xl relative z-50 flex flex-col flex-1 overflow-hidden",
               className,
             )}
             initial={{
@@ -155,7 +155,7 @@ export const ModalFooter = ({
   return (
     <div
       className={cn(
-        "flex justify-center p-4 bg-eerie-black",
+        "flex justify-center p-4 bg-gray-800",
         className,
       )}
     >

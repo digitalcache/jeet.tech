@@ -43,11 +43,11 @@ export const TokenListItem = ({
       href={tokenLink}
       prefetch={true}
       className={cn(
-        "rounded-3xl animate-animateIn opacity-0 group h-auto w-full translate-y-2 relative overflow-hidden hover:shadow-xl transition duration-200 text-left justify-between bg-black flex flex-col",
+        "rounded-3xl animate-animateIn opacity-0 group h-auto w-full translate-y-2 relative overflow-hidden hover:shadow-xl transition duration-200 text-left justify-between flex flex-col",
       )}
     >
       <div className={`transition duration-200 px-4 py-4 z-10 relative w-full`}>
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tl overflow-hidden from-indigo-500/80 to-purple-500/80 -z-30"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tl overflow-hidden from-illuminating-emerald to-teal-deer -z-30"></div>
         <div className="flex justify-between items-center">
           <Image
             src={idea.tokenImageUrl}
@@ -58,13 +58,13 @@ export const TokenListItem = ({
             className={`h-8 w-auto`}
           />
           <div className="bg-white rounded-full text-xs px-2 py-1/2 font-semibold">
-            <span className="bg-gradient-to-b from-indigo-500 to-purple-500 text-transparent bg-clip-text whitespace-nowrap">
+            <span className="bg-gradient-to-b from-illuminating-emerald to-teal-deer text-transparent bg-clip-text whitespace-nowrap">
               {idea.symbol}
             </span>
           </div>
         </div>
         <div className="flex justify-between flex-1 items-center mt-2">
-          <div className="flex text-neutral-200 justify-between w-full items-center">
+          <div className="flex text-neutral-700 justify-between w-full items-center">
             <div className="font-semibold mr-1 text-xl">
               {idea.name}
             </div>
@@ -72,8 +72,8 @@ export const TokenListItem = ({
         </div>
         <div className="mt-2">
           <div className="flex flex-col w-max">
-            <span className="text-sm text-neutral-400">{ideaCardCopy.raised}</span>
-            <span className="text-sm text-neutral-200 font-medium">{fundingRaised ? fundingRaised.toFixed(3).replace(/[.,]000$/, "") : 0} {process.env.NEXT_PUBLIC_CURRENCY || ''}</span>
+            <span className="text-sm text-neutral-600">{ideaCardCopy.raised}</span>
+            <span className="text-sm text-neutral-800 font-medium">{fundingRaised ? fundingRaised.toFixed(3).replace(/[.,]000$/, "") : 0} {process.env.NEXT_PUBLIC_CURRENCY || ''}</span>
           </div>
         </div>
       </div>

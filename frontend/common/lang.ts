@@ -141,7 +141,7 @@ const homePage = {
     heading: 'Explore your journey with our app',
     subHeading: 'You can harness the power of AI to transform your ideas into a fully functional application',
   },
-  subHeading: 'Launch Ideas That Matter with Web3It.AI',
+  subHeading: 'Launch Ideas That Matter with Jeet.Tech',
   h1: 'Turn Public Good Ideas into Reality',
   subHeading1: "Have a solution that could help communities thrive? Transform your public goods idea into a funded project in minutes.",
   subHeading2: "Our AI-powered platform takes you from spark to launch - whether you're creating free educational resources, building community tools, developing environmental solutions, or launching open infrastructure. With instant funding through fair token launches, your idea can start making an impact today.",

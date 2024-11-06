@@ -59,8 +59,7 @@ export const CreateToken = () => {
   return (
     <>
       {(isPending || isLoading || isSupabaseSubmitting || imageProcessing || isIdeaFetching) && <Loader />}
-      <form onSubmit={handleSubmit(onSubmit)} className='max-w-[800px] relative bg-gradient-to-r overflow-hidden from-indigo-500 to-purple-500 w-full rounded-2xl pt-8 flex flex-col gap-4'>
-        <div className='bg-gradient-to-t from-white to-transparent backdrop-blur-3xl blur-[200px] absolute bottom-0 left-0 w-full h-[400px] -z-[0]'></div>
+      <form onSubmit={handleSubmit(onSubmit)} className='max-w-[800px] relative bg-gradient-to-tr overflow-hidden from-illuminating-emerald to-teal-deer w-full rounded-2xl pt-8 flex flex-col gap-4'>
         <div className="px-4 md:px-8 relative flex gap-4 flex-col md:gap-2 md:flex-row">
           <Controller
             name="name"
@@ -77,7 +76,7 @@ export const CreateToken = () => {
                 <Input
                   id={field.name}
                   labelText={formCopy.name}
-                  placeholder="Web3It.AI"
+                  placeholder="Jeet.Tech"
                   error={!!error}
                   errorMessage={error?.message}
                   {...fieldProperties}
@@ -227,7 +226,7 @@ export const CreateToken = () => {
                   <Input
                     id={field.name}
                     labelText={formCopy.website}
-                    placeholder="https://web3it.ai"
+                    placeholder="https://jeet.tech"
                     error={!!error}
                     errorMessage={error?.message}
                     {...fieldProperties}
@@ -251,7 +250,7 @@ export const CreateToken = () => {
                 <Input
                   id={field.name}
                   labelText={formCopy.twitter}
-                  placeholder="https://x.com/justweb3it"
+                  placeholder="https://x.com/vitalik.eth"
                   error={!!error}
                   errorMessage={error?.message}
                   {...fieldProperties}
@@ -266,7 +265,7 @@ export const CreateToken = () => {
             size="md"
             type='submit'
             variant="primary"
-            className="transition-all gap-2 w-full md:w-auto duration-150 disabled:bg-space-cadet/40 bg-space-cadet hover:bg-space-cadet/80 font-medium"
+            className="transition-all gap-2 w-full md:w-auto duration-150 bg-gray-700 hover:bg-gray-600 font-medium"
           >
             {formCopy.submitLabel}
           </Button>

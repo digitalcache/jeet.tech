@@ -69,7 +69,7 @@ export const SearchIdeas = ({
     >
       <div className='w-full fixed top-0 left-0 h-screen flex justify-center pt-[200px] md:pt-0 md:items-center backdrop-blur-md z-[9999] bg-black bg-opacity-20'>
         <div ref={searchBoxRef} className="relative font-medium">
-          <span className="absolute top-2.5 md:top-1/2 md:-translate-y-1/2 left-3 text-indigo-400 z-10">
+          <span className="absolute top-2.5 md:top-1/2 md:-translate-y-1/2 left-3 text-illuminating-emerald z-10">
             <PackageSearch width={24} height={24} strokeWidth={1.5} />
           </span>
           <AsyncSelect
@@ -80,15 +80,15 @@ export const SearchIdeas = ({
             components={{
               IndicatorSeparator: () => <span></span>,
               DropdownIndicator: (state) => {
-                return <span className={`text-indigo-400 cursor-pointer ${state.selectProps.menuIsOpen ? "rotate-180" : ""}`}><ChevronDown/></span>
+                return <span className={`text-gray-500 cursor-pointer ${state.selectProps.menuIsOpen ? "rotate-180" : ""}`}><ChevronDown/></span>
               },
               Option: (props) => {
                 return (
                   <components.Option {...props}>
                     <div className="flex items-center justify-between">
-                      <span className=" font-medium">{props.data.label}</span>
-                      <div className="bg-gradient-to-tl from-indigo-500 to-purple-500 rounded-full text-sm px-2 py-1/2 font-medium">
-                        <span className="text-white">
+                      <span className="font-medium">{props.data.label}</span>
+                      <div className="bg-white rounded-full text-sm px-2 py-1/2 font-medium">
+                        <span className="bg-gradient-to-b from-illuminating-emerald to-teal-deer text-transparent bg-clip-text">
                           {props.data.subdomain}
                         </span>
                       </div>
@@ -102,8 +102,8 @@ export const SearchIdeas = ({
               borderRadius: 6,
               colors: {
                 ...theme.colors,
-                primary25: '#818cf8',
-                primary: '#818cf8',
+                primary25: '#1D976C',
+                primary: '#1D976C',
               },
             })}
             noOptionsMessage={() => searchIdeasCopy.noIdeasFound}
@@ -121,7 +121,7 @@ export const SearchIdeas = ({
               input: () => '!ring-0 !my-0 cursor-text',
               menu: () => '!rounded-xl overflow-hidden',
               menuList: () => '!py-0',
-              option: (state) => `${state.isFocused ? "!text-white" : "!text-neutral-600"} transition-all duration-200 ease-in-out active:!bg-[#818cf8] !cursor-pointer capitalize active:!text-white`,
+              option: (state) => `${state.isFocused ? "!text-white" : "!text-neutral-600"} transition-all duration-200 ease-in-out active:!bg-[#1D976C] !cursor-pointer capitalize active:!text-white`,
             }}
           />
         </div>

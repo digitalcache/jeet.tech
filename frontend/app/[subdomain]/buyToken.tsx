@@ -146,16 +146,16 @@ export const BuyToken = ({
     }
   }
   return (
-    <div className="bg-gradient-to-tl from-indigo-500/90 to-purple-500/90 shadow-lg shadow-black rounded-2xl p-4">
+    <div className="bg-gradient-to-tl from-illuminating-emerald/90 to-teal-deer/90 rounded-2xl p-4">
       <div className="mb-4">
-        <div className="text-white font-semibold mb-2 flex justify-between items-center">
+        <div className="text-neutral-700 font-semibold mb-2 flex justify-between items-center">
           <span>{ideaPageCopy.bondingCurveProgress}</span>
         </div>
         <div className="mt-3">
           <Progress value={fundingRaisedPercentage} />
-          <div className="text-white w-full text-xs mt-1 font-semibold text-right">{parseFloat(`${fundingRaised}`).toFixed(3).replace(/[.,]000$/, "")}/{fundingGoal} <span className="font-normal">{process.env.NEXT_PUBLIC_CURRENCY || ''}</span></div>
+          <div className="text-neutral-600 w-full text-xs mt-1 font-semibold text-right">{parseFloat(`${fundingRaised}`).toFixed(3).replace(/[.,]000$/, "")}/{fundingGoal} <span className="font-normal">{process.env.NEXT_PUBLIC_CURRENCY || ''}</span></div>
         </div>
-        <div className="text-neutral-200 text-xs font-medium mt-2 lg:max-w-[300px]">
+        <div className="text-neutral-600 text-xs mt-2 lg:max-w-[300px]">
           {ideaPageCopy.bondingCurveInfo.replace('%goal%', fundingGoal.toString()).replace('%currency%', process.env.NEXT_PUBLIC_CURRENCY || '')}
         </div>
       </div>
@@ -172,7 +172,7 @@ export const BuyToken = ({
         onChange={(e) => setPurchaseAmount(parseInt(e.target.value ? e.target.value : '0'))}
         width="w-full"
       />
-      <div className="text-white mt-1 text-xs flex items-center justify-end">
+      <div className="text-neutral-600 mt-1 text-xs flex items-center justify-end">
         {ideaPageCopy.availableTokens}: <div className="ml-2 font-semibold">{abbreviateNumber(remainingTokens.toString())}/{abbreviateNumber(maxSupply.toString())}</div>
       </div>
       <Modal>
@@ -186,7 +186,7 @@ export const BuyToken = ({
               <span>{ideaPageCopy.youNeedToPay}</span>
               <div className="flex items-center gap-1">
                 <div className="bg-white rounded-full px-3 py-1/2 font-semibold">
-                  <span className="bg-gradient-to-b from-indigo-500 to-purple-500 text-transparent bg-clip-text">
+                  <span className="bg-gradient-to-b from-illuminating-emerald to-teal-deer text-transparent bg-clip-text">
                     {cost}
                   </span>
                 </div>
@@ -195,7 +195,7 @@ export const BuyToken = ({
               <span>{ideaPageCopy.for}</span>
               <div className="flex items-center gap-1">
                 <div className="bg-white rounded-full px-3 py-1/2 font-semibold">
-                  <span className="bg-gradient-to-b from-indigo-500 to-purple-500 text-transparent bg-clip-text">
+                  <span className="bg-gradient-to-b from-illuminating-emerald to-teal-deer text-transparent bg-clip-text">
                     {purchaseAmount}
                   </span>
                 </div>
@@ -209,7 +209,7 @@ export const BuyToken = ({
               size="md"
               variant="primary"
               onClick={handlePurchase}
-              className="transition-all duration-150 hover:from-indigo-500/70 hover:to-purple-500/70 bg-gradient-to-r from-indigo-500 to-purple-500 font-semibold"
+              className="transition-all duration-150 bg-gradient-to-r from-illuminating-emerald to-teal-deer hover:scale-105 font-semibold"
             >
               {ideaPageCopy.buyNow}
             </Button>

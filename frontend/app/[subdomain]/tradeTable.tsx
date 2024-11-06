@@ -17,11 +17,11 @@ export const TradeTable = ({
 }) => {
   return (
     <div>
-      <div className="mb-2 md:mt-4 text-neutral-100 font-semibold text:lg lg:text-xl">
+      <div className="mb-2 md:mt-4 text-gray-700 font-semibold text:lg lg:text-xl">
         {ideaPageCopy.checkTransHeading} {idea?.name}
       </div>
       <table className="w-full text-sm text-left text-gray-400 rtl:text-right rounded-xl overflow-hidden">
-        <thead className="text-xs bg-purple-700 text-white">
+        <thead className="text-xs bg-illuminating-emerald text-white">
           <tr>
             <th scope="col" className="px-6 py-3 font-semibold">
               {ideaPageCopy.transactionsTable.columnOne}
@@ -40,7 +40,7 @@ export const TradeTable = ({
         <tbody>
           {transfers?.length ? transfers.map((transfer) => (
             <tr
-              className="odd:bg-zinc-900 text-sm even:bg-zinc-800 :not(:last-child):border-b border-gray-700"
+              className="odd:bg-neutral-800 text-sm even:bg-neutral-700 :not(:last-child):border-b border-gray-700"
               key={transfer.transaction_hash}
             >
               <th

@@ -6,7 +6,6 @@ import {
   Sunset,
 } from "lucide-react";
 import { Transition } from "@headlessui/react";
-import { ShootingStars } from "@/common/components/molecules";
 import { ClaudeAIIcon } from "@/common/components/icons";
 import {
   Button, Loader,
@@ -56,14 +55,11 @@ export default function Home () {
 
   return (
     <div className="min-h-screen">
-      <div className="hidden md:block pointer-events-none">
-        <ShootingStars />
-      </div>
       {isIdeaProcessing && <Loader />}
       <h1 className='sr-only'>
         {h1Copy}
       </h1>
-      {!isIdeaGenerated && <div className="text-white absolute bottom-2 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-2 flex gap-1 items-center font-medium text-xs md:text-sm">{poweredByCopy} <ClaudeAIIcon /></div>}
+      {!isIdeaGenerated && <div className="text-gray-500 absolute bottom-2 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-2 flex gap-1 items-center font-medium text-xs md:text-sm">{poweredByCopy} <ClaudeAIIcon /></div>}
       <div className={`${generatedIdea ? "pt-16" : "pt-72"} delay-300 transition-all ease-in-out duration-300 pb-12 px-4`}>
         <div className="container mx-auto flex justify-center flex-col items-center">
           <Transition
@@ -75,18 +71,18 @@ export default function Home () {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <h2 className="text-white font-medium text-2xl flex items-center gap-2">
+            <h2 className="text-gray-700 font-medium text-2xl flex items-center gap-2">
               {getIcon()}
               {greeting}!
             </h2>
           </Transition>
           {isIdeaGenerated && (
             <>
-              <div className="text-neutral-300 mt-8 text-xl md:text-3xl font-semibold text-center mb-4 md:mb-6">{continueCopy}</div>
-              <Button size="md" onClick={() => handleTokenCreation(generatedIdea)} variant="primary" type="button" className="transition-all gap-2 duration-150 hover:from-indigo-500/70 hover:to-purple-500/70 bg-gradient-to-r from-indigo-500 to-purple-500 font-medium">
+              <div className="text-neutral-700 mt-8 text-xl md:text-2xl font-semibold text-center mb-4 md:mb-6">{continueCopy}</div>
+              <Button size="md" onClick={() => handleTokenCreation(generatedIdea)} variant="primary" type="button" className="transition-all gap-2 duration-150 bg-gradient-to-r from-illuminating-emerald to-teal-deer hover:scale-105 font-medium">
                 {proceedCopy}
               </Button>
-              <div className="mt-5 text-sm md:text-base text-neutral-300 pt-5">
+              <div className="mt-5 text-sm md:text-base text-neutral-400 pt-5">
                 {orEnhanceCopy}
               </div>
             </>

@@ -18,7 +18,7 @@ const {
   },
 } = lang
 
-const getErrorClasses = (error: boolean | undefined) => error ? '!ring-1 !ring-red-300' : '';
+const getErrorClasses = (error: boolean | undefined) => error ? '!ring-1 !ring-red-400' : '';
 
 export const MultiSelectAndCustomTags = (props : MultiSelectAndCustomTagsProps) => {
   const {
@@ -63,12 +63,12 @@ export const MultiSelectAndCustomTags = (props : MultiSelectAndCustomTagsProps) 
           components={{
             IndicatorSeparator: () => <span></span>,
             DropdownIndicator: (state) => {
-              return <span className={`text-neutral-300 cursor-pointer ${state.selectProps.menuIsOpen ? "rotate-180" : ""}`}><ChevronDown/></span>
+              return <span className={`text-neutral-400 cursor-pointer ${state.selectProps.menuIsOpen ? "rotate-180" : ""}`}><ChevronDown/></span>
             },
             MultiValue: (props) => {
               return (
-                <div className="bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg text-xs px-2 py-1 font-medium">
-                  <span className="text-white">
+                <div className="bg-black rounded-lg text-xs px-2 py-1 font-medium">
+                  <span className="text-illuminating-emerald">
                     <components.MultiValueContainer {...props} />
                   </span>
                 </div>
@@ -87,8 +87,8 @@ export const MultiSelectAndCustomTags = (props : MultiSelectAndCustomTagsProps) 
             borderRadius: 6,
             colors: {
               ...theme.colors,
-              primary25: '#7E5EF2',
-              primary: '#7E5EF2',
+              primary25: '#1D976C',
+              primary: '#1D976C',
             },
           })}
           isLoading={isLoading}
@@ -104,13 +104,13 @@ export const MultiSelectAndCustomTags = (props : MultiSelectAndCustomTagsProps) 
             input: () => '!ring-0 !my-0 cursor-text',
             menu: () => '!rounded-xl overflow-hidden',
             menuList: () => '!py-0',
-            option: (state) => `${state.isFocused ? "!text-white" : "!text-neutral-600"} transition-all duration-200 ease-in-out active:!bg-[#7E5EF2] !cursor-pointer capitalize active:!text-white`,
+            option: (state) => `${state.isFocused ? "!text-white" : "!text-neutral-600"} transition-all duration-200 ease-in-out active:!bg-[#93f9b9] !cursor-pointer capitalize active:!text-white`,
           }}
           {...rest}
         />
       </div>
       {error && (
-        <p className="mt-0.5 text-sm text-red-300">
+        <p className="mt-0.5 text-sm text-red-400">
           {errorMessage}
         </p>
       )}

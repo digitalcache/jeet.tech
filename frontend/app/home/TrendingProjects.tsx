@@ -25,9 +25,9 @@ export const TrendingProjects = () => {
       {ideas.length ?
         <section className="py-12 px-4">
           <div className="container mx-auto">
-            <div className='flex justify-between border-b border-white border-opacity-10 mb-6 md:mb-12 pb-2 md:pb-4'>
-              <h2 className="text-xl md:text-3xl font-semibold text-white">{homePageCopy.trendingIdeas}</h2>
-              <Link href={routes.viewProjectsPath} prefetch={true} className="flex gap-2 text-white hover:text-indigo-400">
+            <div className='flex justify-between border-b border-black border-opacity-10 mb-6 md:mb-12 pb-2 md:pb-4'>
+              <h2 className="text-xl md:text-3xl font-semibold text-gray-600">{homePageCopy.trendingIdeas}</h2>
+              <Link href={routes.viewProjectsPath} prefetch={true} className="flex gap-2 text-gray-700 hover:text-illuminating-emerald">
                 <Boxes width={32} height={32} className="w-6 h-6 md:w-8 md:h-8" strokeWidth={1} />
               </Link>
             </div>

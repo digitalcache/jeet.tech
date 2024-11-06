@@ -17,30 +17,30 @@ html {
 }
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  background-color: #181926;
+  background-color: #F9F9F9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #818cf8;
+  background-color: #41B951;
 }
 
 .gradientText{
-    background: linear-gradient(to bottom, #a855f7, #6366f1);
+    background: linear-gradient(to top, #1D976C, #93F9B9);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
 
 .buttonWithGradient defs stop:first-child {
-  stop-color: white;
+  stop-color: black;
 }
 .buttonWithGradient defs stop:last-child {
-  stop-color: white;
+  stop-color: black;
 }
 .buttonWithGradient:hover defs stop:first-child, .activeButton defs stop:first-child {
-  stop-color: #a855f7;
+  stop-color: #1D976C;
 }
 .buttonWithGradient:hover defs stop:last-child, .activeButton defs stop:last-child {
-  stop-color: #6366f1;
+  stop-color: #93F9B9;
 }
 
 .uploadIconWithGradient defs stop:first-child {
@@ -50,8 +50,8 @@ html {
   stop-color: #9ca3af;
 }
 .uploadIconWithGradient:hover defs stop:first-child {
-  stop-color: #a855f7;
+  stop-color: #1D976C;
 }
 .uploadIconWithGradient:hover defs stop:last-child {
-  stop-color: #6366f1;
+  stop-color: #93F9B9;
 }

@@ -46,13 +46,13 @@ const primaryFont = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Web3It.AI | Turn Public Good Ideas into Reality',
+  title: 'Jeet.Tech | Turn Public Good Ideas into Reality',
   description: "A home for ideas to get discovered, funded, and championed by the communities they serve. Time to launch something meaningful.",
-  metadataBase: new URL("https://web3it.ai"),
+  metadataBase: new URL("https://jeet.technology"),
   alternates: {
     canonical: '/',
   },
-  keywords: 'crowdfunding blockchain, startup financing, early-stage blockchain, blockchain funding, startup blockchain support, blockchain for startups, blockchain investment platform, early-phase development blockchain, startup crowdfunding solution, blockchain funding innovation, blockchain equity crowdfunding, crypto fundraising, blockchain development funding, startup growth blockchain, blockchain accelerator for startups, innovative funding blockchain, blockchain startup ecosystem, digital currency crowdfunding, blockchain venture capital, blockchain seed funding',
+  keywords: 'crowdfunding blockchain, public, good, ideas, startup financing, early-stage blockchain, blockchain funding, startup blockchain support, blockchain for startups, blockchain investment platform, early-phase development blockchain, startup crowdfunding solution, blockchain funding innovation, blockchain equity crowdfunding, crypto fundraising, blockchain development funding, startup growth blockchain, blockchain accelerator for startups, innovative funding blockchain, blockchain startup ecosystem, digital currency crowdfunding, blockchain venture capital, blockchain seed funding',
 }
 
 export default function RootLayout ({
@@ -66,7 +66,7 @@ export default function RootLayout ({
   )
   return (
     <html lang="en" className={primaryFont.className}>
-      <body className={`bg-eerie-black`}>
+      <body className={`bg-gray-100`}>
         <Suspense>
           <Providers initialState={initialState}>
             {children}

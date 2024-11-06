@@ -119,7 +119,7 @@ export const ImageSelectionAndUpload = ({
             disabled={uploadInProgress}
             onClick={handleUploadFile}
             type="button"
-            className="shadow-sm absolute top-3 right-3 p-2 rounded-lg bg-violets-are-blue hover:bg-opacity-80 text-white"
+            className="shadow-sm absolute top-3 right-3 p-2 rounded-lg bg-teal-deer hover:bg-opacity-80 text-white"
           >
             <Edit width={20} height={20} />
           </button>
@@ -132,13 +132,13 @@ export const ImageSelectionAndUpload = ({
           onClick={handleUploadFile}
         >
           {uploadInProgress ? <CircularSpinner /> : <UploadIcon />}
-          <span className="text-gray-400 text-sm font-medium group-hover:bg-gradient-to-b from-indigo-500 to-purple-500 group-hover:text-transparent group-hover:bg-clip-text">
+          <span className="text-gray-400 text-sm font-medium group-hover:bg-gradient-to-b from-illuminating-emerald to-teal-deer group-hover:text-transparent group-hover:bg-clip-text">
             {uploadInProgress ? imageUploadCopy.uploading : imageUploadCopy.uploadLabel}
           </span>
         </button>
       )}
       {(error || errorField) && (
-        <p className="mt-0.5 text-sm text-red-300">
+        <p className="mt-0.5 text-sm text-red-400">
           {errorMessage || error || ''}
         </p>
       )}

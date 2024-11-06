@@ -29,7 +29,7 @@ export async function generateMetadata ({ params } : {
       });
       const idea = ideaToken as IdeaType
       return {
-        title: `${idea.name} | Web3It.AI`,
+        title: `${idea.name} | Jeet.Tech`,
         description: `${idea.description}`,
         alternates: {
           // canonical: '/ideas',

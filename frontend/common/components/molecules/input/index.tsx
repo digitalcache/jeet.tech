@@ -26,7 +26,7 @@ export const Input = ({
     return (
       <>
         <DefaultInput {...inputProps} ref={inputRef} />
-        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 text-red-300">
+        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 text-red-400">
           {error && <ExclamationErrorIcon />}
         </div>
       </>
@@ -40,7 +40,7 @@ export const Input = ({
           {input}
         </div>
         {error && (
-          <p className="mt-0.5 text-sm text-red-300" data-cy={`${name}-error`}>
+          <p className="mt-0.5 text-sm text-red-400" data-cy={`${name}-error`}>
             {errorMessage}
           </p>
         )}
@@ -61,7 +61,7 @@ export const Input = ({
         {input}
       </div>
       {error && (
-        <p className="mt-0.5 text-sm text-red-300" data-cy={`${name}-error`}>
+        <p className="mt-0.5 text-sm text-red-400" data-cy={`${name}-error`}>
           {errorMessage}
         </p>
       )}

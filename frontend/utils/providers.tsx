@@ -1,26 +1,26 @@
 'use client'
 
-import { 
+import {
   ReactNode, useEffect,
 } from "react";
-import { 
-  QueryClient, 
+import {
+  QueryClient,
   QueryClientProvider,
 } from "@tanstack/react-query";
-import { 
-  RainbowKitProvider, 
+import {
+  RainbowKitProvider,
   getDefaultConfig,
   darkTheme,
 } from '@rainbow-me/rainbowkit'
-import { 
-  type State, 
+import {
+  type State,
   http,
   WagmiProvider,
 } from "wagmi";
 import { unichainSepolia } from 'wagmi/chains'
 
 const config = getDefaultConfig({
-  appName: 'Web3It.AI',
+  appName: 'Jeet.Tech',
   projectId: '9c501b5f82295e29fb3a0b4eb14dab53',
   chains: [
     unichainSepolia,

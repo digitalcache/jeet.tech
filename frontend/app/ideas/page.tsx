@@ -13,7 +13,6 @@ import {
   LayoutList,
   PiggyBank,
 } from "lucide-react";
-import { BackgroundBeamsWithCollision } from '@/common/components/molecules';
 import { Masonry } from "masonic";
 import lang from "@/common/lang";
 import Link from "next/link";
@@ -50,9 +49,9 @@ const ViewTokens = () => {
         onClick={() => handleCategoryChange(c)}
         key={c.id}
         type="button"
-        className={`${c.active ? "bg-white shadow-sm shadow-indigo-400" : ""} hover:bg-white rounded-full transition-all duration-200 ease-in-out px-4 py-1 font-semibold`}
+        className={`${c.active ? "bg-gray-700 shadow-sm shadow-indigo-400" : ""} hover:bg-gray-700 group rounded-full transition-all duration-200 ease-in-out px-4 py-1 font-semibold`}
       >
-        <span className="bg-gradient-to-t from-indigo-500 to-purple-500 whitespace-nowrap text-transparent bg-clip-text">
+        <span className={`${c.active ? "text-white" : "text-transparent group-hover:text-white bg-clip-text bg-gradient-to-t from-illuminating-emerald to-teal-deer "} whitespace-nowrap `}>
           {c.value}
         </span>
       </button>
@@ -61,19 +60,14 @@ const ViewTokens = () => {
 
   return (
     <>
-      <div className="w-full h-full absolute top-0 left-0 pointer-events-none">
-        <BackgroundBeamsWithCollision className="hidden md:block !h-[calc(100%)]">
-          <div className="w-full"></div>
-        </BackgroundBeamsWithCollision>
-      </div>
       <div className="min-h-screen pt-20 md:pt-32 pb-[180px]">
         <div className='container mx-auto flex items-center flex-col w-full relative'>
-          <h2 className="text-2xl md:text-3xl font-semibold mb-2 text-center text-white">{ideasCopy.currentIdeas}</h2>
-          <h1 className="text-center text-neutral-200 text-sm pb-4 max-w-[200px] md:max-w-max">
+          <h2 className="text-2xl md:text-3xl font-semibold mb-2 text-center text-gray-700">{ideasCopy.currentIdeas}</h2>
+          <h1 className="text-center text-neutral-500 text-sm pb-4 max-w-[200px] md:max-w-max">
             {ideasCopy.currentIdeasSubHeading}
           </h1>
           <div className="absolute top-10 right-4 md:right-0">
-            <button type="button" onClick={() => setIsListView(!isListView)} className="flex gap-2 text-white hover:text-indigo-400">
+            <button type="button" onClick={() => setIsListView(!isListView)} className="flex gap-2 text-gray-700 hover:text-illuminating-emerald">
               {isListView ? (
                 <LayoutList />
               ) : (
@@ -81,7 +75,7 @@ const ViewTokens = () => {
               )}
             </button>
           </div>
-          <div className="w-[calc(100%-32px)] mx-auto md:w-full h-px bg-white/10 mb-6"></div>
+          <div className="w-[calc(100%-32px)] mx-auto md:w-full h-px bg-black/10 mb-6"></div>
           <div className="w-[calc(100%-32px)] mx-auto md:w-full mb-6 flex justify-center">
             <Carousel items={carouselItems} />
           </div>
@@ -114,12 +108,12 @@ const ViewTokens = () => {
                       width={200}
                     />
                   </div>
-                  <div className="text-xl md:text-2xl font-semibold text-white text-center">{ideasCopy.noIdeasHeading}</div>
-                  <div className="text-neutral-200 text-sm  mt-2 mb-6 text-center">{ideasCopy.noIdeasSubHeading}</div>
+                  <div className="text-xl md:text-2xl font-semibold text-gray-700 text-center">{ideasCopy.noIdeasHeading}</div>
+                  <div className="text-neutral-500 text-sm  mt-2 mb-6 text-center">{ideasCopy.noIdeasSubHeading}</div>
                   <Link href={routes.newIdeaPath} prefetch={true}
-                    className={`flex items-center justify-center text-white rounded-xl outline-none px-4 py-3 text-base
-                    disabled:cursor-not-allowed ease-in-out transition-all gap-2 duration-150 hover:from-indigo-500/70
-                    hover:to-purple-500/70 bg-gradient-to-r from-indigo-500 to-purple-500 font-medium`}
+                    className={`flex items-center justify-center text-gray-700 rounded-xl outline-none px-4 py-3 text-base
+                    disabled:cursor-not-allowed ease-in-out transition-all gap-2 duration-150 hover:scale-105
+                    bg-gradient-to-r from-teal-deer to-illuminating-emerald font-medium`}
                   >
                     {ideasCopy.registerIdea}
                     <PiggyBank strokeWidth={1.5} />

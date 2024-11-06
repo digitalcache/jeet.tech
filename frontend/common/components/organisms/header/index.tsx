@@ -52,18 +52,18 @@ export const Header = () => {
         searchEnabled={searchEnabled}
         setSearchEnabled={setSearchEnabled}
       />
-      <nav className={`fixed top-0 left-0 right-0 z-[70] transition-all px-4 duration-150 ${isScrolled ? "bg-yankees-blue bg-opacity-50 backdrop-blur-sm" : ""} ${navbarOpened ? "bg-yankees-blue bg-opacity-70 backdrop-blur-sm h-screen" : ""}`}>
+      <nav className={`fixed top-0 left-0 right-0 z-[70] transition-all px-4 duration-150 ${isScrolled ? "bg-neutral-400 bg-opacity-80 backdrop-blur-sm" : ""} ${navbarOpened ? "bg-neutral-400 bg-opacity-70 backdrop-blur-sm h-screen" : ""}`}>
         <div className="container mx-auto py-3 flex items-center justify-between">
-          <Link href={routes.homePath} prefetch={true} replace className="flex md:gap-2 items-center text-white font-semibold md:text-xl">
+          <Link href={routes.homePath} prefetch={true} replace className="flex md:gap-4 items-center font-semibold md:text-2xl">
             <LogoIcon className="scale-75 md:scale-100"/>
-            <span className="text-white">Web3It.AI</span>
+            <span className="gradientText">Jeet.Tech</span>
           </Link>
           <>
             <div className="flex lg:mr-0 gap-4 items-center">
               {/* <button onClick={() => setSearchEnabled(true)} className="text-white flex justify-center items-center md:mr-4 cursor-pointer group">
                 <SearchIcon className="buttonWithGradient" />
               </button> */}
-              <Button size="sm" onClick={() => setSearchEnabled(true)} variant="secondary" className="flex gap-2 py-1 !px-2 md:!px-4 md:py-2.5 hover:!text-indigo-400">
+              <Button size="sm" onClick={() => setSearchEnabled(true)} variant="secondary" className="flex gap-2 py-1 !px-2 md:!px-4 md:py-2.5 !text-gray-700 hover:!text-illuminating-emerald">
                 <PackageSearch width={32} height={32} className="w-6 h-6 md:w-8 md:h-8" strokeWidth={1.5} />
               </Button>
               <ConnectButton />

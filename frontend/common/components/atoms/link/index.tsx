@@ -13,6 +13,6 @@ export const LinkStyled = ({
   target?: string;
 }) => {
   return (
-    <Link target={target} href={href} onClick={(e) => e.stopPropagation()} className={`text-gray-300 hover:text-white md:text-lg font-medium px-4 ${className}`}>{children}</Link>
+    <Link target={target} href={href} onClick={(e) => e.stopPropagation()} className={`text-gray-700 hover:text-illuminating-emerald md:text-lg font-medium px-4 ${className}`}>{children}</Link>
   )
 }
