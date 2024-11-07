@@ -87,7 +87,7 @@ export const SearchIdeas = ({
                   <components.Option {...props}>
                     <div className="flex items-center justify-between">
                       <span className="font-medium">{props.data.label}</span>
-                      <div className="bg-white rounded-full text-sm px-2 py-1/2 font-medium">
+                      <div className="bg-white rounded-full border border-gray-400 text-sm px-2 py-1/2 font-medium">
                         <span className="bg-gradient-to-b from-illuminating-emerald to-teal-deer text-transparent bg-clip-text">
                           {props.data.subdomain}
                         </span>

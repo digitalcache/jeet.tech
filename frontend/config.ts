@@ -5,17 +5,17 @@ import {
   createStorage,
 } from 'wagmi'
 import { 
-  unichainSepolia,
+  sepolia,
 } from 'wagmi/chains'
 export const config = createConfig({
   chains: [
-    unichainSepolia,
+    sepolia,
   ],
   ssr: true,
   storage: createStorage({
     storage: cookieStorage,
   }),
   transports: {
-    [unichainSepolia.id]: http(),
+    [sepolia.id]: http('https://11155111.rpc.thirdweb.com/3c452241953a430f0654b7031b43ca8b'),
   },
 })

@@ -40,7 +40,7 @@ export const Input = ({
           {input}
         </div>
         {error && (
-          <p className="mt-0.5 text-sm text-red-400" data-cy={`${name}-error`}>
+          <p className="mt-0.5 text-sm text-red-500" data-cy={`${name}-error`}>
             {errorMessage}
           </p>
         )}
@@ -61,7 +61,7 @@ export const Input = ({
         {input}
       </div>
       {error && (
-        <p className="mt-0.5 text-sm text-red-400" data-cy={`${name}-error`}>
+        <p className="mt-0.5 text-sm text-red-500" data-cy={`${name}-error`}>
           {errorMessage}
         </p>
       )}

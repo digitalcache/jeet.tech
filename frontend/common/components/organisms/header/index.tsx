@@ -52,7 +52,7 @@ export const Header = () => {
         searchEnabled={searchEnabled}
         setSearchEnabled={setSearchEnabled}
       />
-      <nav className={`fixed top-0 left-0 right-0 z-[70] transition-all px-4 duration-150 ${isScrolled ? "bg-neutral-400 bg-opacity-80 backdrop-blur-sm" : ""} ${navbarOpened ? "bg-neutral-400 bg-opacity-70 backdrop-blur-sm h-screen" : ""}`}>
+      <nav className={`fixed top-0 left-0 right-0 z-[70] transition-all px-4 duration-150 ${isScrolled ? "bg-neutral-500" : ""} ${navbarOpened ? "bg-neutral-400 bg-opacity-70 backdrop-blur-sm h-screen" : ""}`}>
         <div className="container mx-auto py-3 flex items-center justify-between">
           <Link href={routes.homePath} prefetch={true} replace className="flex md:gap-4 items-center font-semibold md:text-2xl">
             <LogoIcon className="scale-75 md:scale-100"/>

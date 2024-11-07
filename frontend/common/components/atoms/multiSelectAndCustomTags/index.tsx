@@ -67,8 +67,8 @@ export const MultiSelectAndCustomTags = (props : MultiSelectAndCustomTagsProps) 
             },
             MultiValue: (props) => {
               return (
-                <div className="bg-black rounded-lg text-xs px-2 py-1 font-medium">
-                  <span className="text-illuminating-emerald">
+                <div className="bg-gray-700 rounded-lg text-xs px-2 py-1 font-medium">
+                  <span className="text-white">
                     <components.MultiValueContainer {...props} />
                   </span>
                 </div>
@@ -110,7 +110,7 @@ export const MultiSelectAndCustomTags = (props : MultiSelectAndCustomTagsProps) 
         />
       </div>
       {error && (
-        <p className="mt-0.5 text-sm text-red-400">
+        <p className="mt-0.5 text-sm text-red-500">
           {errorMessage}
         </p>
       )}

@@ -17,16 +17,16 @@ import {
   http,
   WagmiProvider,
 } from "wagmi";
-import { unichainSepolia } from 'wagmi/chains'
+import { sepolia } from 'wagmi/chains'
 
 const config = getDefaultConfig({
   appName: 'Jeet.Tech',
   projectId: '9c501b5f82295e29fb3a0b4eb14dab53',
   chains: [
-    unichainSepolia,
+    sepolia,
   ],
   transports: {
-    [unichainSepolia.id]: http(),
+    [sepolia.id]: http('https://11155111.rpc.thirdweb.com/3c452241953a430f0654b7031b43ca8b'),
   },
   ssr: true,
 })

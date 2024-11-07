@@ -52,17 +52,17 @@ contract IdeaFactory {
         uint tokenCurrentSupply;
     }
 
-    address constant UNISWAP_V3_FACTORY_ADDRESS = 0x1F98431c8aD98523631AE4a59f267346ea31F984;
-    address constant UNISWAP_V3_POSITION_MANAGER = 0xB7F724d6dDDFd008eFf5cc2834edDE5F9eF0d075;
+    address constant UNISWAP_V3_FACTORY_ADDRESS = 0x0227628f3F023bb0B980b67D528571c95c6DaC1c;
+    address constant UNISWAP_V3_POSITION_MANAGER = 0x1238536071E1c677A632429e3655c799b22cDA52;
     address constant WETH9 = 0x4200000000000000000000000000000000000006;
 
-    uint24 public constant poolFee = 3000; // 0.3% fee tier
+    uint24 public constant poolFee = 3000;
     uint256 public constant IDEATOKEN_CREATION_FEE = 0.0001 ether;
     // uint256 public constant IDEACOIN_FUNDING_GOAL = 24048064056000000000 wei;
     uint256 public constant IDEACOIN_FUNDING_GOAL = 24048064056000000 wei;
     uint256 public constant DECIMALS = 10 ** 18;
     uint256 public constant MAX_SUPPLY = 1000000 * DECIMALS;
-    uint256 public constant INIT_SUPPLY = MAX_SUPPLY / 5; // 20%
+    uint256 public constant INIT_SUPPLY = MAX_SUPPLY / 5;
     uint256 public constant INITIAL_PRICE = 30000000000000;
     uint256 public constant K = 5 * 10**15;
 
@@ -128,34 +128,30 @@ contract IdeaFactory {
     function _createAndInitializePool(address ideaTokenAddress) internal returns (address pool) {
         IUniswapV3Factory factory = IUniswapV3Factory(UNISWAP_V3_FACTORY_ADDRESS);
         pool = factory.createPool(ideaTokenAddress, WETH9, poolFee);
-        // For simplicity, we'll use a 1:1 ratio initially
-        uint160 sqrtPriceX96 = 79228162514264337593543950336; // 1:1 ratio
+        uint160 sqrtPriceX96 = 79228162514264337593543950336;
         IUniswapV3Pool(pool).initialize(sqrtPriceX96);
         return pool;
     }
 
     function _provideLiquidity(address ideaTokenAddress, uint tokenAmount, uint ethAmount) internal {
-        // Approve the position manager
         TransferHelper.safeApprove(ideaTokenAddress, UNISWAP_V3_POSITION_MANAGER, tokenAmount);
 
         INonfungiblePositionManager positionManager = INonfungiblePositionManager(UNISWAP_V3_POSITION_MANAGER);
 
-        // Parameters for creating a position
         INonfungiblePositionManager.MintParams memory params = INonfungiblePositionManager.MintParams({
             token0: ideaTokenAddress < WETH9 ? ideaTokenAddress : WETH9,
             token1: ideaTokenAddress < WETH9 ? WETH9 : ideaTokenAddress,
             fee: poolFee,
-            tickLower: -887220,  // Represents a price range of +-10%
-            tickUpper: 887220,   // from the current price
+            tickLower: -887220,
+            tickUpper: 887220,
             amount0Desired: ideaTokenAddress < WETH9 ? tokenAmount : ethAmount,
             amount1Desired: ideaTokenAddress < WETH9 ? ethAmount : tokenAmount,
-            amount0Min: 0,        // Protection against slippage
-            amount1Min: 0,        // Protection against slippage
+            amount0Min: 0,
+            amount1Min: 0,
             recipient: address(this),
             deadline: block.timestamp
         });
 
-        // create liquidty for the target eth i.e. 24eth
         (uint tokenId, uint128 liquidity, uint amount0, uint amount1) = positionManager.mint{value: ethAmount}(params);
     }
 

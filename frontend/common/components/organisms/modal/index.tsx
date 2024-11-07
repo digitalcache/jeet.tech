@@ -39,7 +39,7 @@ export const ModalTrigger = ({
         }
         setIsModalOpen(true)
       }}
-      className="transition-all w-full mt-4 duration-150 disabled:bg-gray-500 bg-gray-700 hover:bg-gray-600 font-semibold"
+      className="transition-all w-full mt-4 duration-150 !text-gray-700 disabled:!text-gray-500 disabled:bg-white/50 bg-white hover:bg-white/90"
     >
       {children}
     </Button>

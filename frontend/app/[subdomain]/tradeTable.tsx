@@ -49,7 +49,7 @@ export const TradeTable = ({
               >
                 <a
                   className="text-white"
-                  href={`https://polygonscan.com//address/${transfer.to_address}`}
+                  href={`https://eth-sepolia.blockscout.com/address/${transfer.to_address}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -65,7 +65,7 @@ export const TradeTable = ({
               <th className="px-6 py-4 font-medium hover:underline">
                 <a
                   className="text-white"
-                  href={`https://polygonscan.com/tx/${transfer.transaction_hash}`}
+                  href={`https://eth-sepolia.blockscout.com/tx/${transfer.transaction_hash}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

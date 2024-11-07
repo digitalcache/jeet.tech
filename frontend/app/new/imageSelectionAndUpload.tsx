@@ -119,7 +119,7 @@ export const ImageSelectionAndUpload = ({
             disabled={uploadInProgress}
             onClick={handleUploadFile}
             type="button"
-            className="shadow-sm absolute top-3 right-3 p-2 rounded-lg bg-teal-deer hover:bg-opacity-80 text-white"
+            className="shadow-sm absolute top-3 right-3 p-2 rounded-lg bg-gray-700 hover:bg-opacity-80 text-white"
           >
             <Edit width={20} height={20} />
           </button>
@@ -138,7 +138,7 @@ export const ImageSelectionAndUpload = ({
         </button>
       )}
       {(error || errorField) && (
-        <p className="mt-0.5 text-sm text-red-400">
+        <p className="mt-0.5 text-sm text-red-500">
           {errorMessage || error || ''}
         </p>
       )}

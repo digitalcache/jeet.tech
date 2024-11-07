@@ -57,7 +57,7 @@ export const TokenCard = ({
             <div className="text-neutral-600 text-xs flex flex-col">
               {ideaPageCopy.createdBy}{" "}
               <LinkStyled
-                href={`https://unichain-sepolia.blockscout.com/address/${idea.creatorAddress}`}
+                href={`https://eth-sepolia.blockscout.com/address/${idea.creatorAddress}`}
                 target="_blank"
                 className="!px-0 !text-xs hover:underline font-semibold hover:!text-neutral-700"
               >
@@ -67,7 +67,7 @@ export const TokenCard = ({
             <div className="text-neutral-600 text-xs flex flex-col">
               {ideaPageCopy.tokenAddress}{" "}
               <LinkStyled
-                href={`https://unichain-sepolia.blockscout.com/address/${idea.tokenAddress}`}
+                href={`https://eth-sepolia.blockscout.com/address/${idea.tokenAddress}`}
                 target="_blank"
                 className="!px-0 !text-xs hover:underline font-semibold hover:!text-neutral-700"
               >
@@ -85,7 +85,7 @@ export const TokenCard = ({
           <div className="flex justify-end mt-2 gap-2">
             {idea.twitterUrl ? (
               <LinkStyled
-                className="!px-0 hover:!text-neutral-600"
+                className="!px-0 hover:!text-neutral-700"
                 href={idea.twitterUrl}
                 target="_blank"
               >
@@ -93,7 +93,7 @@ export const TokenCard = ({
               </LinkStyled>
             ) : null}
             <LinkStyled
-              className="!px-0 !text-xs w-max flex items-center -mr-2 hover:!text-neutral-600"
+              className="!px-0 !text-xs w-max flex items-center font-semibold hover:underline -mr-2 hover:!text-neutral-700"
               href={idea.productUrl}
               target="_blank"
             >
@@ -120,11 +120,11 @@ export const TokenCard = ({
                 <LinkStyled
                   href={`https://polygonscan.com/address/${owner.owner_address}`}
                   target="_blank"
-                  className="!px-0 !text-sm hover:underline hover:!text-neutral-600"
+                  className="!px-0 !text-sm hover:underline font-semibold hover:!text-neutral-700"
                 >
                   {index}. {owner.owner_address.slice(2, 7)}
                 </LinkStyled>
-                <span className="text-neutral-300 text-sm">
+                <span className="text-neutral-700 text-sm">
                   {parseFloat(owner.percentage_relative_to_total_supply).toFixed(2)}%
                 </span>
               </div>

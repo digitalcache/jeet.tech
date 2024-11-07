@@ -43,7 +43,7 @@ export const Token = ({
       href={tokenLink}
       prefetch={true}
       className={cn(
-        "rounded-3xl animate-animateIn opacity-0 group h-auto w-full translate-y-2 relative overflow-hidden hover:shadow-xl transition duration-200 text-left justify-between flex flex-col",
+        "rounded-3xl animate-animateIn opacity-0 group h-auto w-full translate-y-2 relative overflow-hidden hover:shadow-xl transition-all duration-500 ease-in-out text-left justify-between flex flex-col",
       )}
     >
       <div className={`transition duration-200 px-4 py-4 z-10 relative w-full`}>

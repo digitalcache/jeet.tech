@@ -49,7 +49,7 @@ const ViewTokens = () => {
         onClick={() => handleCategoryChange(c)}
         key={c.id}
         type="button"
-        className={`${c.active ? "bg-gray-700 shadow-sm shadow-indigo-400" : ""} hover:bg-gray-700 group rounded-full transition-all duration-200 ease-in-out px-4 py-1 font-semibold`}
+        className={`${c.active ? "bg-gray-700 shadow-sm shadow-teal-deer" : ""} hover:bg-gray-700 group rounded-full transition-all duration-200 ease-in-out px-4 py-1 font-semibold`}
       >
         <span className={`${c.active ? "text-white" : "text-transparent group-hover:text-white bg-clip-text bg-gradient-to-t from-illuminating-emerald to-teal-deer "} whitespace-nowrap `}>
           {c.value}
