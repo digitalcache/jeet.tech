@@ -29,10 +29,10 @@ export const Footer = () => {
           <div className="container mx-auto flex flex-col md:flex-row w-full justify-between items-center md:items-end px-4 gap-4 py-4 md:py-12 md:gap-2 md:px-0 pb-4">
             <div className="flex flex-col gap-4">
               <div className="flex gap-4 justify-center md:justify-start">
-                <a href="https://www.linkedin.com/company/web3ai/" target="_blank" className="group buttonWithGradient">
+                <a href="#" target="_blank" className="group buttonWithGradient">
                   <LinkedInIcon className="text-white"  />
                 </a>
-                <a href="https://x.com/justweb3it" target="_blank" className="group buttonWithGradient">
+                <a href="https://x.com/jeet_technology" target="_blank" className="group buttonWithGradient">
                   <TwitterIcon width={32} height={32} className="group-hover:text-white" />
                 </a>
                 <a href="#" className="group buttonWithGradient">
@@ -81,9 +81,10 @@ export const Footer = () => {
               </Button>
             </form>
             <p className="mt-4 text-gray-300 text-center">
-              {footerCopy.contactUsModal.youCanContact} support@jeet.tech
+              {footerCopy.contactUsModal.youCanContact} contact@jeet.technology
             </p>
             <button
+              type="button"
               onClick={() => setIsModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-white"
             >
