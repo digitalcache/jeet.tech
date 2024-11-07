@@ -52,21 +52,21 @@ export const Header = () => {
         searchEnabled={searchEnabled}
         setSearchEnabled={setSearchEnabled}
       />
-      <nav className={`fixed top-0 left-0 right-0 z-[70] transition-all px-4 duration-150 ${isScrolled ? "bg-neutral-500" : ""} ${navbarOpened ? "bg-neutral-400 bg-opacity-70 backdrop-blur-sm h-screen" : ""}`}>
+      <nav className={`fixed top-0 left-0 right-0 z-[70] transition-all px-4 duration-150 ${isScrolled ? "bg-yankees-blue bg-opacity-50 backdrop-blur-sm" : ""} ${navbarOpened ? "bg-neutral-400 bg-opacity-70 backdrop-blur-sm h-screen" : ""}`}>
         <div className="container mx-auto py-3 flex items-center justify-between">
           <Link href={routes.homePath} prefetch={true} replace className="flex md:gap-4 items-center font-semibold md:text-2xl">
-            <LogoIcon className="scale-75 md:scale-100"/>
-            <span className="gradientText">Jeet.Tech</span>
+            <LogoIcon isScrolled={isScrolled} className="scale-75 md:scale-100"/>
+            <span className={`${isScrolled ? "text-white" : "gradientText"}`}>Jeet.Tech</span>
           </Link>
           <>
             <div className="flex lg:mr-0 gap-4 items-center">
               {/* <button onClick={() => setSearchEnabled(true)} className="text-white flex justify-center items-center md:mr-4 cursor-pointer group">
                 <SearchIcon className="buttonWithGradient" />
               </button> */}
-              <Button size="sm" onClick={() => setSearchEnabled(true)} variant="secondary" className="flex gap-2 py-1 !px-2 md:!px-4 md:py-2.5 !text-gray-700 hover:!text-illuminating-emerald">
+              <Button size="sm" onClick={() => setSearchEnabled(true)} variant="secondary" className={`flex gap-2 py-1 !px-2 md:!px-4 md:py-2.5 ${isScrolled ? "!text-white/80 hover:!text-white/60" : "!text-gray-700 hover:!text-illuminating-emerald"}`}>
                 <PackageSearch width={32} height={32} className="w-6 h-6 md:w-8 md:h-8" strokeWidth={1.5} />
               </Button>
-              <ConnectButton />
+              <ConnectButton isScrolled={isScrolled} />
               {/* <div className={`lg:hidden`}>
                 <div className={`${navbarOpened ? "rotate-90" : "rotate-0"} relative inline-block h-[20px] w-[20px] cursor-pointer [transition:all_0.3s_cubic-bezier(0.4,_0.01,_0.165,_0.99)]`}>
                   <button onClick={openNavbar} type="button" className={`w-[18px] h-[18px] relative block -mt-[10px] ${navbarOpened ? "ml-0.5" : "mx-[auto]"}  mb-[0] top-2/4`}>

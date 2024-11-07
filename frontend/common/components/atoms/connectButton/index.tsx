@@ -14,7 +14,7 @@ const {
   },
 } = lang
 
-export const ConnectButton = () => {
+export const ConnectButton = ({ isScrolled } : { isScrolled: boolean }) => {
   const avatarGradient = useMemo(() => {
     const colorArr = [
       "linear-gradient(-225deg, #00c3ff 0%, #ffff1c 100%)",
@@ -56,7 +56,7 @@ export const ConnectButton = () => {
             {(() => {
               if (!connected) {
                 return (
-                  <Button size="sm" onClick={openConnectModal} variant="secondary" className="flex hover:scale-105 !text-neutral-700 gap-2 md:ring-1 py-1 !px-2 md:!px-4 md:py-2.5 ring-neutral-700 ring-inset hover:ring-0 from-illuminating-emerald to-teal-deer hover:bg-gradient-to-r font-medium">
+                  <Button size="sm" onClick={openConnectModal} variant="secondary" className={`flex hover:scale-105 gap-2 md:ring-1 py-1 !px-2 md:!px-4 md:py-2.5 ${isScrolled ? "ring-white !text-white" : "ring-neutral-700 !text-neutral-700"} ring-inset hover:ring-0 from-illuminating-emerald to-teal-deer hover:bg-gradient-to-r font-medium`}>
                     <span className='hidden md:inline'>{connectButtonCopy.connectWallet}</span>
                     <WalletMinimal />
                   </Button>
