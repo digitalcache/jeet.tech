@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.24;
 
 import "./Idea.sol";
 import "@uniswap/v3-core/contracts/interfaces/IUniswapV3Factory.sol";
@@ -54,11 +54,10 @@ contract IdeaFactory {
 
     address constant UNISWAP_V3_FACTORY_ADDRESS = 0x0227628f3F023bb0B980b67D528571c95c6DaC1c;
     address constant UNISWAP_V3_POSITION_MANAGER = 0x1238536071E1c677A632429e3655c799b22cDA52;
-    address constant WETH9 = 0x4200000000000000000000000000000000000006;
+    address constant WETH9 = 0x7b79995e5f793A07Bc00c21412e50Ecae098E7f9;
 
     uint24 public constant poolFee = 3000;
     uint256 public constant IDEATOKEN_CREATION_FEE = 0.0001 ether;
-    // uint256 public constant IDEACOIN_FUNDING_GOAL = 24048064056000000000 wei;
     uint256 public constant IDEACOIN_FUNDING_GOAL = 24048064056000000 wei;
     uint256 public constant DECIMALS = 10 ** 18;
     uint256 public constant MAX_SUPPLY = 1000000 * DECIMALS;
